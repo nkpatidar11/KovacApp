@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kovac.app.fragments.LandingFragment">
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/small3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/take_control"
+        android:textSize="17sp"
+        android:layout_below="@+id/logo_image"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FF9800"/>
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/button_with_corner_orange"
+        android:text="Start Here"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonStart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_with_corner_blue"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="@color/color_white"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonWithUs"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginStart="80dp"
+        android:background="@drawable/border_with_corner"
+        android:text="Why be with us?"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

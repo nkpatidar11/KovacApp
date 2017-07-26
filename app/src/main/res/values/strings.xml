@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Kovac App</string>
+
+    <!-- Landing Screen -->
+    <string name="take_control"><i>Take control of your superannuation</i></string>
+
 </resources>
