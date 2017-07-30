@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingTop="10dp"
+android:paddingLeft="10dp"
+android:paddingRight="10dp"
+tools:context="com.kovac.app.fragments.SignupEmploymentFragment">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:text="Employment Details"
+            android:gravity="left"
+            android:layout_weight="2"
+            android:textColor="@color/color_label"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="0"
+            android:layout_marginLeft="25dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/kovac_logo1502" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerLayout"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="70dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewEmploymentStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:text="Employment Status"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <Spinner
+                android:id="@+id/spEmploymentStatus"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="140dp"
+                android:spinnerMode="dropdown"
+                style="@style/SpinnerTheme"/>
+
+
+            <TextView
+                android:id="@+id/textViewOccupation"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewEmploymentStatus"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="Occupation"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <EditText
+                android:id="@+id/spOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="140dp"
+                android:layout_below="@+id/textViewEmploymentStatus"
+                android:layout_marginTop="20dp"
+                android:inputType="textPersonName"
+                android:background="@drawable/border_with_corner"/>
+
+            <TextView
+            android:id="@+id/textViewTaxFileNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewOccupation"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:text="Tax File Number"
+            android:textColor="@color/color_label"
+            android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <EditText
+                android:id="@+id/spTaxFileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="140dp"
+                android:layout_below="@+id/textViewOccupation"
+                android:layout_marginTop="20dp"
+                android:inputType="textPersonName"
+                android:background="@drawable/border_with_corner"/>
+
+            <TextView
+                android:id="@+id/textViewAnnualIncome"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewTaxFileNumber"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:text="Annual Income"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <EditText
+                android:id="@+id/spAnnualIncome"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginLeft="140dp"
+                android:layout_below="@+id/textViewTaxFileNumber"
+                android:layout_marginTop="20dp"
+                android:hint="$"
+                android:inputType="numberDecimal"
+                android:background="@drawable/border_with_corner"/>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="17dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

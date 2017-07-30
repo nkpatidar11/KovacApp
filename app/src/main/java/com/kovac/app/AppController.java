@@ -18,7 +18,7 @@ public class AppController extends Application {
 
         super.onCreate();
         mInstance = this;
-        registerActivityLifecycleCallbacks(new ActivityLifecycleAdapter() {
+        registerActivityLifecycleCallbacks(new ActivityLifecycleHelper() {
             @Override
             public void onActivityCreated(Activity a, Bundle savedInstanceState) {
                 a.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);

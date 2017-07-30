@@ -8,7 +8,7 @@ import android.os.Bundle;
  * Created by Jai Gurudev on 7/26/2017.
  */
 
-public class ActivityLifecycleAdapter implements Application.ActivityLifecycleCallbacks {
+public class ActivityLifecycleHelper implements Application.ActivityLifecycleCallbacks {
     @Override
     public void onActivityCreated(Activity activity, Bundle bundle) {
 

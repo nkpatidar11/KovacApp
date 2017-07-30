@@ -4,4 +4,36 @@
     <!-- Landing Screen -->
     <string name="take_control"><i>Take control of your superannuation</i></string>
 
+    <!-- Login screen text -->
+    <string name="client_portfolio_access">Client Portfolio Access</string>
+    <string name="existing_client_but_dont_have_a_login">Existing client but don\'t have a login?</string>
+    <string name="register_here">Register <u>here</u></string>
+
+    <!-- Register screen text -->
+    <string name="existing_client_online_registration">Existing client online registration</string>
+
+    <!-- Registration success text -->
+    <string name="registration_success_message">Your registration has been submitted!</string>
+    <string name="registration_success_discription">Our team will setup your registration by the next business day and you will receive a confirmation email when your online access is ready. </string>
+
+    <!-- Kovac why with us screen text -->
+    <string name="header_text">Kovac Smart Super Accounts</string>
+    <string name="discription_text1">A better and innovative way to invest your superannuation. The Kovac Smart Superannuation Accounts are completely transparent, individual superannuation investment accounts managed by our highly skilled and experienced investment team.</string>
+    <string name="discription_text2"><b style="font-size: 20px;">Benefits of a Kovac Smart Super Account</b></string>
+    <string name="discription_text3">-100% Free superannuation assessment including a personalised, detailed Statement of Advice.\n
+        - Ultra low adviser service fee of 0.8% per year on the balance of your superannuation fund.\n
+        - Real time access to your superannuation portfolio, account details and more across all of your personal devices.\n
+        - Your own personal financial adviser who will provide ongoing financial advice, strategy and support by email or phone\n
+        - Genuinly active and high conviction investment manager, meaning potentially significant outperformance of investment portfolios.\n
+        - Managed in accordance with our robust, disciplined and proven investment philosophy and process.\n
+        - Diversified, transparent investment portfolio with direct superannuation ownership of investments in:\n
+                  \t\t\t- Direct Australian Shares\n
+                  \t\t\t- International Managed Funds\n
+                  \t\t\t- Exchange Traded Funds (ETFs)\n
+                  \t\t\t- Corporate Hybrid Securities\n
+    </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

@@ -1,0 +1,309 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context="com.kovac.app.fragments.SignupPersonalDetailFragment">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:text="Your Personal Details"
+            android:gravity="left"
+            android:layout_weight="2"
+            android:textColor="@color/color_label"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="0"
+            android:layout_marginLeft="25dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/kovac_logo1502" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/headerLayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/textViewFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/text_size_signup_login_detail"
+                android:text="Frst Name"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/color_label" />
+
+            <EditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/border_with_corner"
+                android:inputType="textPersonName"
+                android:layout_marginLeft="140dp"/>
+
+
+            <TextView
+                android:id="@+id/textViewSurname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewFirstName"
+                android:layout_marginTop="17dp"
+                android:gravity="center_vertical"
+                android:text="Surname"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <EditText
+                android:id="@+id/etSurname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height_size"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewFirstName"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/border_with_corner"
+                android:inputType="textPersonName" />
+
+          <TextView
+              android:id="@+id/textViewGender"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Gender"
+              android:layout_marginTop="17dp"
+              android:textSize="@dimen/text_size_signup_login_detail"
+              android:textColor="@color/color_label"
+              android:layout_below="@+id/textViewSurname"
+              android:layout_alignParentLeft="true"/>
+
+          <Spinner
+              android:id="@+id/spGender"
+              android:layout_width="match_parent"
+              android:layout_height="30dp"
+              android:layout_alignParentRight="true"
+              android:layout_below="@+id/textViewSurname"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="140dp"
+              android:layout_marginTop="15dp"
+              android:spinnerMode="dropdown"
+              style="@style/SpinnerTheme"/>
+
+            <TextView
+                android:id="@+id/textViewDob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewGender"
+                android:layout_marginTop="17dp"
+                android:text="Date of birth"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <EditText
+                android:id="@+id/etDob"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height_size"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewGender"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/border_with_corner"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textViewStreetAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewDob"
+                android:layout_marginTop="17dp"
+                android:text="Street Address"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <EditText
+                android:id="@+id/etStreetAddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height_size"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewDob"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/border_with_corner"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textViewSuburb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewStreetAddress"
+                android:layout_marginTop="17dp"
+                android:text="Suburb"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <EditText
+                android:id="@+id/etSuburb"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height_size"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewStreetAddress"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/border_with_corner"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/textViewState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="State"
+                android:layout_marginTop="17dp"
+                android:textSize="@dimen/text_size_signup_login_detail"
+                android:textColor="@color/color_label"
+                android:layout_below="@+id/textViewSuburb"
+                android:layout_alignParentLeft="true"/>
+
+            <Spinner
+                android:id="@+id/spState"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewSuburb"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="15dp"
+                android:spinnerMode="dropdown"
+                style="@style/SpinnerTheme"/>
+
+            <TextView
+                android:id="@+id/textViewPostCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewState"
+                android:layout_marginTop="17dp"
+                android:text="Postcode"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <EditText
+                android:id="@+id/etPostCode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_height_size"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewState"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/border_with_corner"
+                android:inputType="textPostalAddress" />
+
+            <TextView
+                android:id="@+id/textViewMaritalStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Marital Status"
+                android:layout_marginTop="17dp"
+                android:textSize="@dimen/text_size_signup_login_detail"
+                android:textColor="@color/color_label"
+                android:layout_below="@+id/textViewPostCode"
+                android:layout_marginBottom="10dp"
+                android:layout_alignParentLeft="true"/>
+
+            <Spinner
+                android:id="@+id/spMaritalStatus"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewPostCode"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:spinnerMode="dropdown"
+                style="@style/SpinnerTheme"/>
+
+            <TextView
+                android:id="@+id/textViewDependantChildren"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dependant Children"
+                android:layout_marginTop="17dp"
+                android:textSize="@dimen/text_size_signup_login_detail"
+                android:textColor="@color/color_label"
+                android:layout_below="@+id/textViewMaritalStatus"
+                android:layout_alignParentLeft="true"/>
+
+            <Spinner
+                android:id="@+id/spDependantChildren"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewMaritalStatus"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="15dp"
+                android:spinnerMode="dropdown"
+                style="@style/SpinnerTheme"/>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="17dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+    </RelativeLayout>
+</RelativeLayout>
+
