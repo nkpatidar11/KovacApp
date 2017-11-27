@@ -15,7 +15,7 @@ tools:context="com.kovac.app.fragments.SignupEmploymentFragment">
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_vertical"
@@ -79,36 +79,37 @@ tools:context="com.kovac.app.fragments.SignupEmploymentFragment">
                 android:textSize="@dimen/text_size_signup_login_detail" />
 
             <EditText
-                android:id="@+id/spOccupation"
+                android:id="@+id/etOccupation"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginLeft="140dp"
                 android:layout_below="@+id/textViewEmploymentStatus"
+                android:layout_marginLeft="140dp"
                 android:layout_marginTop="20dp"
-                android:inputType="textPersonName"
-                android:background="@drawable/border_with_corner"/>
+                android:background="@drawable/border_with_corner"
+                android:inputType="textPersonName" />
 
             <TextView
-            android:id="@+id/textViewTaxFileNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textViewOccupation"
-            android:layout_marginTop="20dp"
-            android:gravity="center_vertical"
-            android:text="Tax File Number"
-            android:textColor="@color/color_label"
-            android:textSize="@dimen/text_size_signup_login_detail" />
-
-            <EditText
-                android:id="@+id/spTaxFileNumber"
-                android:layout_width="match_parent"
+                android:id="@+id/textViewTaxFileNumber"
+                android:layout_width="wrap_content"
                 android:layout_height="30dp"
-                android:layout_marginLeft="140dp"
+                android:layout_alignParentLeft="true"
                 android:layout_below="@+id/textViewOccupation"
                 android:layout_marginTop="20dp"
-                android:inputType="textPersonName"
-                android:background="@drawable/border_with_corner"/>
+                android:gravity="center_vertical"
+                android:text="Tax File Number"
+                android:inputType="number"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <EditText
+                android:id="@+id/etTaxFileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/textViewOccupation"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/border_with_corner"
+                android:inputType="textPersonName" />
 
             <TextView
                 android:id="@+id/textViewAnnualIncome"
@@ -123,15 +124,15 @@ tools:context="com.kovac.app.fragments.SignupEmploymentFragment">
                 android:textSize="@dimen/text_size_signup_login_detail" />
 
             <EditText
-                android:id="@+id/spAnnualIncome"
+                android:id="@+id/etAnnualIncome"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginLeft="140dp"
                 android:layout_below="@+id/textViewTaxFileNumber"
+                android:layout_marginLeft="140dp"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/border_with_corner"
                 android:hint="$"
-                android:inputType="numberDecimal"
-                android:background="@drawable/border_with_corner"/>
+                android:inputType="numberDecimal" />
 
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>

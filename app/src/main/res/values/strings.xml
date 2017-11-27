@@ -33,7 +33,48 @@
                   \t\t\t- Corporate Hybrid Securities\n
     </string>
 
+    <!-- Insurance screen text -->
+    <string name="insurance_desc">Personal protection and life insurance is a very important part of your superannuation. Most superannuation accounts provide some level of life insurance so it is important that we know and understand your current insurance cover and your insurance needs.</string>
+
+    <!-- Risk Profile Screen text -->
+    <string name="top_desc">In order to build a superannuation investment portfolio that is suitable to your personal situation we need to assess your investment style and what levels of risk you are willing to take.
+\nPlease select the risk level you believe fits your personal financial objectives.</string>
+    <string name="high_growth_desc">A high growth investor is typically someone who will not access their super for more than 15 years and is willing to accept greater volitility in the value of their portfolio.</string>
+    <string name="growth_desc">A growth investor is typically someone who will not access their super for more than 10 years and is willing to accept a higher volitility in the value of their portfolio.</string>
+    <string name="balanced_desc">A balanced investor is typically someone who will not access their super for more than 5 years and is willing to accept moderate volitility in the value of their portfolio.</string>
+    <string name="concervative_desc">A concervative investor is typically someone who is retired and is receiving an income stream from their superannuation portfolio.</string>
+
+    <!-- Identification Screen text -->
+    <string name="identification_desc">Please provide your drivers licence or passport so we can varify your new superannuation account.
+Use the capture frame to take a photo of your licence or passport and upload it to our system.</string>
+
+
+    <!-- Disclaimer screen text -->
+    <string name="disclaimer_desc">I confirm that all details provided in this application are accurate to the best of my knowledge.\n\n
+
+        I agree to give Kovac Private Wealth Pty Ltd adviser authority on my current superannuation fund to discuss any details on my account with the provider.\n\n
+
+        By clicking submit you are instructing Kovac Private Wealth Pty Ltd to complete a Statement of Advice that will outline all details of your superannuation investment and insurance. You will not be charged for this service and remain under no obligation to proceed.
+    </string>
+
+
+    <!-- Submitted Screen text -->
+    <string name="submitted_desc">We have received your superannuation application and will process it within one business day. Our team will produce a personalised Statement of Advice that will outline all of the details of our advice and any fees that will be charged to your new super fund. <b>You will not pay any fees out of your own pocket.</b>
+
+\n\nYou will also receive your completed superannuation account application form to provide your digital signature.
+
+\n\nIf you would like a free conversation or meeting with your financial adviser please check the below checkbox and your personal financial adviser will call you shortly.</string>
+
+    <string name="submitted_accept_term">Yes, I would like my personal financial adviser to contact me to discuss my superannuation portfolio.</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="get_started"><u>Get Started</u></string>
+
+    <string name="finger_title">Touch id for \"Kovac Super\"</string>
+    <string name="finger_desc">Authentication required to see portal"</string>
+
+    <!-- Acra crash report library -->
+    <string name="crash_toast_text">Ooooops ! I crashed, but a report has been sent to my developer to help fix the issue !</string>
 </resources>

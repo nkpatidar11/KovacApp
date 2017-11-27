@@ -15,7 +15,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_vertical"
@@ -41,82 +41,571 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/headerLayout"
-        android:layout_marginTop="24dp"
-        android:paddingBottom="30dp">
+        android:layout_marginTop="10dp"
+        android:paddingBottom="105dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewSuperFundName"
+                android:id="@+id/textViewFundDetails"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_alignParentLeft="true"
-                android:gravity="center_vertical"
-                android:text="Super Fund Name"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:text="Please enter your existing superannuation fund details"
+                android:gravity="left"
+                android:layout_weight="2"
                 android:textColor="@color/color_label"
-                android:textSize="@dimen/text_size_signup_login_detail" />
+                android:textSize="15sp" />
 
-            <EditText
-                android:id="@+id/etSuperFundName"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginLeft="140dp"
-                android:background="@drawable/border_with_corner"
-                android:inputType="textPersonName" />
-
-            <TextView
-                android:id="@+id/textViewMemberNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textViewSuperFundName"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:gravity="center_vertical"
-                android:text="Member Number"
-                android:textColor="@color/color_label"
-                android:textSize="@dimen/text_size_signup_login_detail" />
+                android:id="@+id/rLSuperannuation">
 
-            <EditText
-                android:id="@+id/etMemberNumber"
+                <TextView
+                    android:id="@+id/textViewSuperFundName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="Super Fund Name"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+
+                <EditText
+                    android:id="@+id/etSuperFundName"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="140dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewSuperFundName"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Member Number"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+
+                <EditText
+                    android:id="@+id/etMemberNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewSuperFundName"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/textViewWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewHeight"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Current Value"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+
+                <EditText
+                    android:id="@+id/etCurrentValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewHeight"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:inputType="numberDecimal" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_below="@+id/textViewSuperFundName"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/border_with_corner"
-                android:inputType="number" />
+                android:layout_height="wrap_content"
+                android:id="@+id/rLSuperannuation1"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textViewSuperFundName1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="Super Fund Name"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etSuperFundName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="140dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="textPersonName" />
 
-            <TextView
-                android:id="@+id/textViewCurrentValue"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textViewMemberNumber"
-                android:layout_marginTop="15dp"
-                android:gravity="center_vertical"
-                android:text="Current Value"
-                android:textColor="@color/color_label"
-                android:textSize="@dimen/text_size_signup_login_detail" />
+                <TextView
+                    android:id="@+id/textViewHeight1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewSuperFundName1"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Member Number"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etMemberNumber1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewSuperFundName1"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="number" />
 
-            <EditText
-                android:id="@+id/etCurrentValue"
+                <TextView
+                    android:id="@+id/textViewWeight1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewHeight1"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Current Value"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etCurrentValue1"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewHeight1"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:inputType="numberDecimal" />
+            </RelativeLayout>
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_below="@+id/textViewMemberNumber"
-                android:layout_marginLeft="140dp"
-                android:layout_marginTop="15dp"
-                android:background="@drawable/border_with_corner"
-                android:hint="$"
-                android:inputType="textPersonName" />
+                android:layout_height="wrap_content"
+                android:id="@+id/rLSuperannuation2"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textViewSuperFundName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="Super Fund Name"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etSuperFundName2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="140dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="textPersonName" />
 
-            <TextView
+                <TextView
+                    android:id="@+id/textViewHeight2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewSuperFundName2"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Member Number"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etMemberNumber2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewSuperFundName2"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/textViewWeight2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewHeight2"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Current Value"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etCurrentValue2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewHeight2"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:inputType="numberDecimal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rLSuperannuation3"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textViewSuperFundName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="Super Fund Name"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etSuperFundName3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="140dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewHeight3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewSuperFundName3"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Member Number"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etMemberNumber3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewSuperFundName3"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/textViewWeight3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewHeight3"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Current Value"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etCurrentValue3"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewHeight3"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:inputType="numberDecimal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rLSuperannuation4"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textViewSuperFundName4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="Super Fund Name"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etSuperFundName4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="140dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewHeight4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewSuperFundName4"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Member Number"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etMemberNumber4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewSuperFundName4"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/textViewWeight4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewHeight4"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Current Value"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etCurrentValue4"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewHeight4"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:inputType="numberDecimal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rLSuperannuation5"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textViewSuperFundName5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="Super Fund Name"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etSuperFundName5"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="140dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewHeight5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewSuperFundName5"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Member Number"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etMemberNumber5"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewSuperFundName5"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/textViewWeight5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewHeight5"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Current Value"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etCurrentValue5"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewHeight5"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:inputType="numberDecimal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rLSuperannuation6"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textViewSuperFundName6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="Super Fund Name"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etSuperFundName6"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="140dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewHeight6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewSuperFundName6"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Member Number"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etMemberNumber6"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewSuperFundName6"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/textViewWeight6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewHeight6"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Current Value"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etCurrentValue6"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewHeight6"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:inputType="numberDecimal" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rLSuperannuation7"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+                <TextView
+                    android:id="@+id/textViewSuperFundName7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:text="Super Fund Name"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etSuperFundName7"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="140dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="textPersonName" />
+
+                <TextView
+                    android:id="@+id/textViewHeight7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewSuperFundName7"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Member Number"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etMemberNumber7"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewSuperFundName7"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/textViewWeight7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/textViewHeight7"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Current Value"
+                    android:textColor="@color/color_label"
+                    android:textSize="@dimen/text_size_signup_login_detail" />
+                <EditText
+                    android:id="@+id/etCurrentValue7"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@+id/textViewHeight7"
+                    android:layout_marginLeft="140dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:inputType="numberDecimal" />
+            </RelativeLayout>
+
+            <!--<TextView
                 android:id="@+id/textViewInvestmentOption"
                 android:layout_width="wrap_content"
                 android:layout_height="30dp"
                 android:layout_alignParentLeft="true"
-                android:layout_below="@+id/textViewCurrentValue"
+                android:layout_below="@+id/textViewWeight"
                 android:layout_marginTop="15dp"
                 android:gravity="center_vertical"
                 android:text="Investment Option"
@@ -128,15 +617,15 @@
                 style="@style/SpinnerTheme"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_below="@+id/textViewCurrentValue"
+                android:layout_below="@+id/textViewWeight"
                 android:layout_marginLeft="140dp"
                 android:layout_marginTop="15dp"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal" />-->
 
-        </RelativeLayout>
+        </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -153,7 +642,7 @@
             android:textColor="@color/color_superannuation_term_text" />
 
         <CheckBox
-            android:id="@+id/cbSuperannuationTerm"
+            android:id="@+id/cbSuperannuationStatus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -164,7 +653,38 @@
             android:scaleY="0.8"
             android:text=""
             android:textSize="0sp" />
-    </LinearLayout>
+    </LinearLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/buttonDynamicLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonLayout"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/button_with_corner_orange"
+            android:text="Add More"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/btnRemove"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+    </RelativeLayout>
 
 
     <RelativeLayout

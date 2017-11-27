@@ -18,7 +18,7 @@
             android:src="@drawable/small3" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textViewDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -29,23 +29,23 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textViewEmail"
+            android:id="@+id/textViewUserNmae"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/textView"
+            android:layout_below="@+id/textViewDesc"
             android:layout_centerVertical="true"
             android:layout_marginTop="35dp"
             android:textSize="@dimen/input_text_size"
-            android:text="Email"
+            android:text="Username"
             android:textColor="@color/color_label" />
 
         <EditText
-            android:id="@+id/etEmail"
+            android:id="@+id/etUserName"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/textView"
+            android:layout_below="@+id/textViewDesc"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="25dp"
             android:background="@drawable/border_with_corner"
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/etEmail"
+            android:layout_below="@+id/etUserName"
             android:layout_centerVertical="true"
             android:layout_marginTop="20dp"
             android:text="Password"
@@ -68,14 +68,14 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/etEmail"
+            android:layout_below="@+id/etUserName"
             android:layout_centerVertical="true"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="12dp"
             android:background="@drawable/border_with_corner"
             android:inputType="textPassword" />
 
-        <TextView
+        <!--<TextView
             android:id="@+id/textViewRememberMe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,12 +99,12 @@
             android:scaleX="0.7"
             android:scaleY="0.7"
             android:text=""
-            android:textSize="0sp" />
+            android:textSize="0sp" />-->
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/textViewRememberMe"
+            android:layout_below="@+id/textViewPassword"
             android:id="@+id/buttonLayout"
             android:layout_marginTop="35dp">
 

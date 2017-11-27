@@ -52,6 +52,7 @@ public class RegisterSuccessFragment extends Fragment {
         }
     }
 
+
     @Override
     public void onDetach() {
         super.onDetach();

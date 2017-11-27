@@ -1,13 +1,510 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kovac.app.fragments.SignupInsuranceDetailFragment">
+    tools:context="com.kovac.app.fragments.SignupInsuranceDetailFragment"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textViewDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:text="Insurance Details"
+        android:textColor="@color/color_label"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintVertical_bias="0.484"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/imageView2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="8dp" />
 
-</FrameLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="0"
+        android:adjustViewBounds="true"
+        android:src="@drawable/kovac_logo1502"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewInsuranceDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/insurance_desc"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/input_text_size"
+                app:layout_constraintHorizontal_bias="0.307"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewSubHeader1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Personal Protection Insurance"
+                android:textColor="@color/color_label"
+                android:textSize="17sp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewInsuranceDesc" />
+
+            <TextView
+                android:id="@+id/textViewCurrentlyInsurance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical"
+                android:text="Do you currently have insurance cover within your superannuation fund?"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail"
+                app:layout_constraintBottom_toBottomOf="@+id/switchCurrently"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/switchCurrently"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSubHeader1" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/switchCurrently"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#000"
+                android:textSize="16dp"
+                app:kswTextOff="No"
+                app:kswTextOn="Yes"
+                app:kswThumbColor="@color/color_label"
+                app:layout_constraintRight_toRightOf="@+id/textViewSubHeader1"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSubHeader1" />
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/insuranceLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCurrentlyInsurance"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewInsuranceType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="What type of insurance cover do you have?"
+                    android:textColor="@color/color_label"
+                    android:textSize="17sp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/textViewLifeInsurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Life Insurance"
+                    android:textColor="@color/color_label"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/cbLifeInsurance"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <CheckBox
+                    android:id="@+id/cbLifeInsurance"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="7dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewInsuranceType"
+                    app:layout_constraintLeft_toRightOf="@+id/textViewLifeInsurance"
+                    android:layout_marginLeft="8dp" />
+
+                <TextView
+                    android:id="@+id/textViewLifeInsuranceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginRight="9dp"
+                    android:gravity="center_vertical"
+                    android:text="Value"
+                    android:textColor="@color/color_label"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etLifeInsuranceValue"
+                    app:layout_constraintRight_toLeftOf="@+id/etLifeInsuranceValue" />
+
+                <TextView
+                    android:id="@+id/textViewDisabilityInsuranceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="9dp"
+                    android:gravity="center_vertical"
+                    android:text="Value"
+                    android:textColor="@color/color_label"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etDisabilityInsuranceValue"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintLeft_toLeftOf="@+id/textViewLifeInsuranceValue"
+                    app:layout_constraintRight_toLeftOf="@+id/etDisabilityInsuranceValue"
+                    android:layout_marginStart="8dp" />
+
+                <TextView
+                    android:id="@+id/textViewIncomeProtectionValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginRight="9dp"
+                    android:gravity="center_vertical"
+                    android:text="Value"
+                    android:textColor="@color/color_label"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etIncomeProtectionValue"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="@+id/textViewLifeInsuranceValue"
+                    app:layout_constraintRight_toLeftOf="@+id/etIncomeProtectionValue" />
+
+                <TextView
+                    android:id="@+id/textTraumaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginRight="9dp"
+                    android:gravity="center_vertical"
+                    android:text="Value"
+                    android:textColor="@color/color_label"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/etTraumaValue"
+                    app:layout_constraintLeft_toLeftOf="@+id/textViewLifeInsuranceValue"
+                    app:layout_constraintRight_toLeftOf="@+id/etTraumaValue" />
+
+                <EditText
+                    android:id="@+id/etLifeInsuranceValue"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:enabled="false"
+                    android:inputType="number"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewInsuranceType" />
+
+
+                <EditText
+                    android:id="@+id/etDisabilityInsuranceValue"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:enabled="false"
+                    android:inputType="number"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etLifeInsuranceValue" />
+
+                <EditText
+                    android:id="@+id/etIncomeProtectionValue"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:enabled="false"
+                    android:inputType="number"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etDisabilityInsuranceValue" />
+
+                <EditText
+                    android:id="@+id/etTraumaValue"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/border_with_corner"
+                    android:hint="$"
+                    android:enabled="false"
+                    android:inputType="number"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etIncomeProtectionValue" />
+
+                <TextView
+                    android:id="@+id/textViewDisabilityInsurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Disability Insurance"
+                    android:textColor="@color/color_label"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/cbDisabilityInsurance"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:id="@+id/textViewIncomeProtection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Income Protection"
+                    android:textColor="@color/color_label"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/cbIncomeProtection"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginStart="10dp" />
+
+                <TextView
+                    android:id="@+id/textViewTrauma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:text="Trauma Insurance"
+                    android:textColor="@color/color_label"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/cbTraumaInsurance"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginStart="8dp" />
+
+                <CheckBox
+                    android:id="@+id/cbDisabilityInsurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cbLifeInsurance"
+                    app:layout_constraintLeft_toRightOf="@+id/textViewDisabilityInsurance" />
+
+                <CheckBox
+                    android:id="@+id/cbIncomeProtection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cbDisabilityInsurance"
+                    app:layout_constraintLeft_toRightOf="@+id/textViewIncomeProtection" />
+
+                <CheckBox
+                    android:id="@+id/cbTraumaInsurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintTop_toBottomOf="@+id/cbIncomeProtection"
+                    app:layout_constraintLeft_toRightOf="@+id/textViewTrauma" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/textViewSmoker"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0"
+                android:gravity="center_vertical"
+                android:text="Are you a smoker?"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/switchSmoker"
+                app:layout_constraintTop_toBottomOf="@+id/insuranceLayout" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/switchSmoker"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_gravity="right"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#000"
+                android:textSize="16dp"
+                app:kswTextOff="No"
+                app:kswTextOn="Yes"
+                app:kswThumbColor="@color/color_label"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="@+id/switchCurrently"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/insuranceLayout" />
+
+
+            <TextView
+                android:id="@+id/textViewHeight"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Height"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSmoker"
+                tools:layout_conversion_absoluteHeight="30dp"
+                tools:layout_conversion_absoluteWidth="112dp"
+                tools:layout_conversion_absoluteX="10dp"
+                tools:layout_conversion_absoluteY="289dp" />
+
+            <EditText
+                android:id="@+id/etHeight"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_with_corner"
+                android:hint="Cm"
+                android:inputType="number"
+                app:layout_constraintLeft_toRightOf="@+id/textViewHeight"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSmoker"
+                tools:layout_conversion_absoluteHeight="30dp"
+                tools:layout_conversion_absoluteWidth="224dp"
+                tools:layout_conversion_absoluteX="150dp"
+                tools:layout_conversion_absoluteY="105dp" />
+
+            <TextView
+                android:id="@+id/textViewWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Weight"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail"
+                app:layout_constraintLeft_toRightOf="@+id/etHeight"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSmoker"
+                tools:layout_conversion_absoluteHeight="30dp"
+                tools:layout_conversion_absoluteWidth="91dp"
+                tools:layout_conversion_absoluteX="10dp"
+                tools:layout_conversion_absoluteY="334dp" />
+
+            <EditText
+                android:id="@+id/etWeight"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_with_corner"
+                android:hint="Kg"
+                android:inputType="number"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSmoker"
+                tools:layout_conversion_absoluteHeight="30dp"
+                tools:layout_conversion_absoluteWidth="224dp"
+                tools:layout_conversion_absoluteX="150dp"
+                tools:layout_conversion_absoluteY="274dp"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toRightOf="@+id/textViewWeight" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

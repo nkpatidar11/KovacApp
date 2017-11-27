@@ -1,6 +1,8 @@
 package com.kovac.app.fragments;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.kovac.app.R;
+import com.kovac.app.utils.Util;
+
+import static android.R.attr.button;
 
 public class KovacWhyWithUsFragment extends Fragment {
 
@@ -33,6 +38,15 @@ public class KovacWhyWithUsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 onKovacWhyWithUsFragmentInteractionListener.onKovacWhyWithUsFragmentSelected("homeBack");
+            }
+        });
+
+        buttonVisitWebsite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                /*Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(Util.WEBSITE_URL));
+                startActivity(intent);*/
+                onKovacWhyWithUsFragmentInteractionListener.onKovacWhyWithUsFragmentSelected("visitWebsite");
             }
         });
 

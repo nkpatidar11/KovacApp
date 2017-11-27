@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:scaleType="centerCrop"
         app:srcCompat="@drawable/kovac_smart_super_logo"
         android:layout_alignParentTop="true" />
     <ProgressBar

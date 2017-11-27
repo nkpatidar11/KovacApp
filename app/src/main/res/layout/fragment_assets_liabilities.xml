@@ -1,0 +1,331 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context="com.kovac.app.fragments.AssetsLiabilitiesFragment">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="2"
+            android:gravity="left"
+            android:text="Your Assets and Liabilities"
+            android:textColor="@color/color_label"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="0"
+            android:layout_marginLeft="25dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/kovac_logo1502" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerLayout"
+        android:layout_marginBottom="70dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textViewYourAssets"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Your Assets"
+                android:textColor="@color/color_label"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewValue"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Value"
+                android:textColor="@color/color_label"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textViewOwnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewYourAssets"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:text="Own Home"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <TextView
+                android:id="@+id/textViewInvestmentProperty"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewOwnHome"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Investment Property"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <TextView
+                android:id="@+id/textViewSharePortfolio"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignEnd="@+id/textViewInvestmentProperty"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/textViewInvestmentProperty"
+                android:layout_below="@+id/textViewInvestmentProperty"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Share Portfolio"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <TextView
+                android:id="@+id/textViewOtherAssets"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewSharePortfolio"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Other Assets"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <TextView
+                android:id="@+id/textViewYourLiabilities"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewOtherAssets"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:text="Your Liabilities"
+                android:textColor="@color/color_label"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHomeLoan"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewYourLiabilities"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Home Loan"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <TextView
+                android:id="@+id/textViewInvestmentLoans"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewHomeLoan"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Investment Loans"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+
+            <TextView
+                android:id="@+id/textViewCreditCards"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewInvestmentLoans"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Credit Cards"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <TextView
+                android:id="@+id/textViewOtherLiabilities"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewCreditCards"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:text="Other Liabilities"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/text_size_signup_login_detail" />
+
+            <EditText
+                android:id="@+id/etOwnHome"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/textViewYourAssets"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_with_corner"
+                android:hint="$"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etInvestmentProperty"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/etOwnHome"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_with_corner"
+                android:hint="$"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etSharePortfolio"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/etInvestmentProperty"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_with_corner"
+                android:hint="$"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etOtherAssets"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignBaseline="@+id/textViewOtherAssets"
+                android:layout_alignBottom="@+id/textViewOtherAssets"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_with_corner"
+                android:hint="$"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etHomeLoan"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textViewYourLiabilities"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_with_corner"
+                android:hint="$"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etInvestmentLoans"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/textViewInvestmentLoans"
+                android:layout_marginLeft="140dp"
+                android:background="@drawable/border_with_corner"
+                android:hint="$"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etCreditCards"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/etInvestmentLoans"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_with_corner"
+                android:hint="$"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/etOtherLiabilities"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/etCreditCards"
+                android:layout_marginLeft="140dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/border_with_corner"
+                android:hint="$"
+                android:inputType="numberDecimal" />
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="17dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

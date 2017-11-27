@@ -1,0 +1,243 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context="com.kovac.app.fragments.KovacWhyWithUsFragment">
+
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:layout_weight="1"
+            android:text="Your Risk Profile"
+            android:textColor="@color/color_label"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:adjustViewBounds="true"
+            android:src="@drawable/kovac_logo1502" />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/buttonLayout"
+        android:layout_below="@+id/headerLayout">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rgRiskProfile">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/top_desc"
+                android:textAlignment="inherit"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/input_text_size" />
+
+            <!--<TextView
+                android:id="@+id/textViewHighGrowth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:layout_marginTop="7dp"
+                android:text="High Growth"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />-->
+
+            <RadioButton
+                android:id="@+id/rbHighGrowth"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView1"
+                android:checked="true"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"
+                android:text="High Growth"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHGDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/rbHighGrowth"
+                android:text="@string/high_growth_desc"
+                android:textAlignment="inherit"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/input_text_size" />
+
+            <!--<TextView
+                android:id="@+id/textViewGrowth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewHGDesc"
+                android:layout_marginTop="10dp"
+                android:text="Growth"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />-->
+
+            <RadioButton
+                android:id="@+id/rbGrowth"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewHGDesc"
+                android:text="Growth"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart"
+                android:layout_gravity="start"/>
+
+            <TextView
+                android:id="@+id/textViewGDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/rbGrowth"
+                android:text="@string/growth_desc"
+                android:textAlignment="inherit"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/input_text_size" />
+
+            <!--<TextView
+                android:id="@+id/textViewBalanced"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewGDesc"
+                android:layout_marginTop="10dp"
+                android:text="Balanced"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />-->
+
+            <RadioButton
+                android:id="@+id/rbBalanced"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewGDesc"
+                android:text="Balanced"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart"
+                android:layout_gravity="start" />
+
+            <TextView
+                android:id="@+id/textViewBDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/rbBalanced"
+                android:text="@string/balanced_desc"
+                android:textAlignment="inherit"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/input_text_size" />
+
+            <!--<TextView
+                android:id="@+id/textViewConcervative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewBDesc"
+                android:layout_marginTop="10dp"
+                android:text="Concervative"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />-->
+
+            <RadioButton
+                android:id="@+id/rbConcervative"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textViewBDesc"
+                android:text="Concervative"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layoutDirection="rtl"
+                android:textAlignment="textStart"
+                android:layout_gravity="start" />
+
+            <TextView
+                android:id="@+id/textViewCDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/rbConcervative"
+                android:text="@string/concervative_desc"
+                android:textAlignment="inherit"
+                android:textColor="@color/color_label"
+                android:textSize="@dimen/input_text_size" />
+
+        </RadioGroup>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="17dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/border_with_corner"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/color_button_text"
+            android:textSize="@dimen/button_text_size" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
